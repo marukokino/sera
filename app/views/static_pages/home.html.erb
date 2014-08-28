@@ -15,6 +15,12 @@
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>
     </div>
+ <div>
+ <%= link_to "Entocha um produto", entocha_path,
+                                class: "btn btn-large btn-primary" %>
+
+</div>
+
   </div>
 <% else %>
   <div class="center hero-unit">
@@ -25,7 +31,7 @@
       <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
       sample application.
     </h2>
-
+    
     <%= link_to "Sign up now!", signup_path,
                                 class: "btn btn-large btn-primary" %>
   </div>
