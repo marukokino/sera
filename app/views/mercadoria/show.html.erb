@@ -1,66 +1,16 @@
  
-    
- <% volumecont20 = 27  %> 
-<p><%= volumecont20 = 27  %> CBM<p>
+ <%= @volumecont20 %>
+    @volumepeca    %>
+ 
+  
+  <%=  @quantcont  %>
+ <%= @quantporcbm  %>
+  <%= @precofobcont  %>
+  <%= @cifvar  %>
+       
+  <%=  @multiplicador  %>
+    <%=     @custocontainernacional  %>
 
- <% volumepeca = @mercadorium.altura * @mercadorium.largura * @mercadorium.comprimento %>    
-   <p><%=  a = volumepeca /3 %> cm2 <p> 
-   <p><%= quantcont = (27/0.036176).round  %> pecas no container<p> 
-   <p><%= quantporcbm = (1/0.036176).round(2)  %> pecas por CBM <p> 
-   <p><%= precofobcont = (quantcont * @mercadorium.preco).round(2)  %> USD <p>
-
-
- <table class="table table-bordered">
-<h3/> Orcamento container de 20 : <h3>
-
-    <thead>
-        <tr>
-            <th>Preco unitario</th>
-            <th>Quantidade container</th>
-            <th>Preco FOB do container</th>
-           
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-               <td><%= @mercadorium.preco %> USD</td>
-             <td><%= quantcont %> Pecas</td>
-            <td><%= precofobcont %> USD</td>
-       </tr>
-<tr>
-            
-                  </tr>
-        
-    </tbody>
-</table>
-  </tbody>
-</table>
-
-
-<table class="table table-bordered">
-
-    <thead>
-        <tr>
-            <th>Frete total</th>
-            <th>C.I.F</th>
-            <th>Nacionalizacao</th>
-            <th> Custo total container nacionalizado</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-               <td><%= @mercadorium.precofrete %> USD </td>
-             <td><%= cifvar = @mercadorium.precofrete + precofobcont %> USD </td>
-            <td><%= @mercadorium.imposto%>  % </td>
-                      <% x1 = @mercadorium.imposto/100.to_f %>
-          <td> <%=  (x1* precofobcont) + precofobcont %>  USD </td>
-       </tr>
-<tr>
-            
-           
-       </tr>
-        
-    </tbody>
 
 <p id="notice"><%= notice %></p>
 
