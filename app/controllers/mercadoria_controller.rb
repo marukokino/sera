@@ -10,7 +10,7 @@ class MercadoriaController < ApplicationController
   # GET /mercadoria/1
   # GET /mercadoria/1.json
   def show
-
+@volumecont20 = 27  
 
   end
 
