@@ -29,7 +29,38 @@
        </tr>
 <tr>
             
+                  </tr>
+        
+    </tbody>
+</table>
+  </tbody>
+</table>
+
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Frete total</th>
+            <th>C.I.F</th>
+            <th>Nacionalizacao</th>
+            <th> Custo total container nacionalizado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+               <td><%= @mercadorium.precofrete %> USD </td>
+             <td><%= cifvar = @mercadorium.precofrete + precofobcont %> USD </td>
+            <td><%= @mercadorium.imposto%>  % </td>
+                      <% x1 = @mercadorium.imposto/100.to_f %>
+          <td> <%=  (x1* precofobcont) + precofobcont %>  USD </td>
+       </tr>
+<tr>
+            
            
+       </tr>
+        
+    </tbody>
 
 <p id="notice"><%= notice %></p>
 
