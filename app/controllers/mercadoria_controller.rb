@@ -11,6 +11,12 @@ class MercadoriaController < ApplicationController
   # GET /mercadoria/1.json
   def show
 @volumecont20 = 27  
+@volumepeca = @mercadorium.altura * @mercadorium.largura *      @mercadorium.comprimento   
+ 
+   @a = @volumepeca /3 
+    @quantcont = (27/0.036176).round  
+  @quantporcbm = (1/0.036176).round(2)  
+   @precofobcont = (@quantcont * @mercadorium.preco).round(2) 
 
   end
 
