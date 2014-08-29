@@ -1,5 +1,35 @@
  
+    
+ <% volumecont20 = 27  %> 
+<p><%= volumecont20 = 27  %> CBM<p>
 
+ <% volumepeca = @mercadorium.altura * @mercadorium.largura * @mercadorium.comprimento %>    
+   <p><%=  a = volumepeca /3 %> cm2 <p> 
+   <p><%= quantcont = (27/0.036176).round  %> pecas no container<p> 
+   <p><%= quantporcbm = (1/0.036176).round(2)  %> pecas por CBM <p> 
+   <p><%= precofobcont = (quantcont * @mercadorium.preco).round(2)  %> USD <p>
+
+
+ <table class="table table-bordered">
+<h3/> Orcamento container de 20 : <h3>
+
+    <thead>
+        <tr>
+            <th>Preco unitario</th>
+            <th>Quantidade container</th>
+            <th>Preco FOB do container</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+               <td><%= @mercadorium.preco %> USD</td>
+             <td><%= quantcont %> Pecas</td>
+            <td><%= precofobcont %> USD</td>
+       </tr>
+<tr>
+            
+           
 
 <p id="notice"><%= notice %></p>
 
