@@ -9,15 +9,78 @@
  <%=  @multiplicador %>
  <%=   @custocontainernacional %>
 
- 
+  <table class="table table-bordered">
+<h3/> Orcamento container de 20 : <h3>
+
+    <thead>
+        <tr>
+            <th>Preco unitario</th>
+            <th>Quantidade container</th>
+            <th>Preco FOB do container</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+               <td><%= @mercadorium.preco %> USD</td>
+             <td><%= @quantcont %> Pecas</td>
+            <td><%= @precofobcont %> USD</td>
+       </tr>
+<tr>
+            
+           
+       </tr>
+        
+    </tbody>
+</table>
 
 
+<table class="table table-bordered">
 
+    <thead>
+        <tr>
+            <th>Frete total</th>
+            <th>C.I.F</th>
+            <th>Nacionalizacao (impostos) </th>
+            <th> Custo total container nacionalizado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+               <td><%= @mercadorium.precofrete %> USD </td>
+             <td><%= @cifvar %>  USD </td>
+             <td><%=  @mercadorium.imposto %>  % </td>
+             <td> <%=  @custocontainernacional %>  USD </td>
+       </tr>
+<tr>
+            
+           
+       </tr>
+        
+    </tbody>
+</table>
 
+<table class="table table-bordered">
 
-
-
- 
+    <thead>
+        <tr>
+            <th>Total impostos container</th>
+            <th>Custo impostos por peca </th>
+            <th>Frete por peca </th>
+            <th> Custo da peca nacionalizada </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+               <td> <%=  @impostocontainer     %> USD</td>
+             <td><%= @custnaciounit %> USD</td>
+            <td><%= @freteunit  %>  USD </td>
+          <td><%= @custnaciounit  %> USD  </td>
+       </tr>
+  <tr>
+ </tr>
+   </tbody>
+</table>
 
 <p id="notice"><%= notice %></p>
 

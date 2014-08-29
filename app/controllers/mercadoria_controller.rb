@@ -12,18 +12,19 @@ class MercadoriaController < ApplicationController
   def show
 @volumecont20 = 27  
 @volumepeca = @mercadorium.altura * @mercadorium.largura *      @mercadorium.comprimento   
- 
+  @multiplicador = @mercadorium.imposto/100.to_f 
    @a = @volumepeca /3 
     @quantcont = (27/0.036176).round  
   @quantporcbm = (1/0.036176).round(2)  
    @precofobcont = (@quantcont * @mercadorium.preco).round(2) 
    @cifvar = @mercadorium.precofrete + @precofobcont 
-       
-    @multiplicador = @mercadorium.imposto/100.to_f 
- @custocontainernacional = (@multiplicador * @precofobcont) + @precofobcont 
-
-
-  end
+    @impostocontainer =  @multiplicador *  @cifvar
+      
+   @custocontainernacional = (@multiplicador * @precofobcont) + @precofobcont 
+  @freteunit = @mercadorium.precofrete / @quantcont
+   @custnaciounit = (@custocontainernacional / @quantcont).round(3)
+ 
+   end
 
   # GET /mercadoria/new
   def new
