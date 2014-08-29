@@ -1,11 +1,12 @@
 SampleApp::Application.routes.draw do
   resources :mercadoria
 
-  get "produtos/newrails"
-  get "produtos/generate"
-  get "produtos/controller"
-  get "produtos/Produtos"
-  get "produtos/new"
+ 
+  get "mercadoria/index"
+
+
+
+
   resources :users do
     member do
       get :following, :followers
