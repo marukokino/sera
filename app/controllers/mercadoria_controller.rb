@@ -17,6 +17,11 @@ class MercadoriaController < ApplicationController
     @quantcont = (27/0.036176).round  
   @quantporcbm = (1/0.036176).round(2)  
    @precofobcont = (@quantcont * @mercadorium.preco).round(2) 
+   @cifvar = @mercadorium.precofrete + @precofobcont 
+       
+    @multiplicador = @mercadorium.imposto/100.to_f 
+ @custocontainernacional = (@multiplicador * @precofobcont) + @precofobcont 
+
 
   end
 
