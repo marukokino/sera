@@ -1,0 +1,1 @@
+json.extract! @mercadorium, :nome, :descricao, :preco, :precoumcbm, :precomeiodevinte, :altura, :largura, :comprimento, :precofrete, :imposto, :precodevenda, :precodaconco, :vendamensal, :outroscustosdevenda, :created_at, :updated_at

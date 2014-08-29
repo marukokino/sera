@@ -1,0 +1,53 @@
+<h1>Listing mercadoria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Preco</th>
+      <th>Precoumcbm</th>
+      <th>Precomeiodevinte</th>
+      <th>Altura</th>
+      <th>Largura</th>
+      <th>Comprimento</th>
+      <th>Precofrete</th>
+      <th>Imposto</th>
+      <th>Precodevenda</th>
+      <th>Precodaconco</th>
+      <th>Vendamensal</th>
+      <th>Outroscustosdevenda</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mercadoria.each do |mercadorium| %>
+      <tr>
+        <td><%= mercadorium.nome %></td>
+        <td><%= mercadorium.descricao %></td>
+        <td><%= mercadorium.preco %></td>
+        <td><%= mercadorium.precoumcbm %></td>
+        <td><%= mercadorium.precomeiodevinte %></td>
+        <td><%= mercadorium.altura %></td>
+        <td><%= mercadorium.largura %></td>
+        <td><%= mercadorium.comprimento %></td>
+        <td><%= mercadorium.precofrete %></td>
+        <td><%= mercadorium.imposto %></td>
+        <td><%= mercadorium.precodevenda %></td>
+        <td><%= mercadorium.precodaconco %></td>
+        <td><%= mercadorium.vendamensal %></td>
+        <td><%= mercadorium.outroscustosdevenda %></td>
+        <td><%= link_to 'Show', mercadorium %></td>
+        <td><%= link_to 'Edit', edit_mercadorium_path(mercadorium) %></td>
+        <td><%= link_to 'Destroy', mercadorium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mercadorium', new_mercadorium_path %>

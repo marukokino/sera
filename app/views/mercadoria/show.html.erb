@@ -1,0 +1,106 @@
+           <td><%= @mercadorium.preco %></td>
+            <td><%= @mercadorium.precofrete %></td>
+ <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nome:</th>
+            <td><%= @mercadorium.nome %></td>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+               <th>Descricao:</th>
+            <th><%= @mercadorium.descricao %></th>
+           
+       </tr>
+<tr>
+               <th>preco:</th>
+            <th><%= @mercadorium.preco %></th>
+           
+       </tr>
+        
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @mercadorium.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @mercadorium.descricao %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @mercadorium.preco %>
+</p>
+
+<p>
+  <strong>Precoumcbm:</strong>
+  <%= @mercadorium.precoumcbm %>
+</p>
+
+<p>
+  <strong>Precomeiodevinte:</strong>
+  <%= @mercadorium.precomeiodevinte %>
+</p>
+
+<p>
+  <strong>Altura:</strong>
+  <%= @mercadorium.altura %>
+</p>
+
+<p>
+  <strong>Largura:</strong>
+  <%= @mercadorium.largura %>
+</p>
+
+<p>
+  <strong>Comprimento:</strong>
+  <%= @mercadorium.comprimento %>
+</p>
+
+<p>
+  <strong>Precofrete:</strong>
+  <%= @mercadorium.precofrete %>
+</p>
+
+<p>
+  <strong>Imposto:</strong>
+  <%= @mercadorium.imposto %>
+</p>
+
+<p>
+  <strong>Precodevenda:</strong>
+  <%= @mercadorium.precodevenda %>
+</p>
+
+<p>
+  <strong>Precodaconco:</strong>
+  <%= @mercadorium.precodaconco %>
+</p>
+
+<p>
+  <strong>Vendamensal:</strong>
+  <%= @mercadorium.vendamensal %>
+</p>
+
+<p>
+  <strong>Outroscustosdevenda:</strong>
+  <%= @mercadorium.outroscustosdevenda %>
+</p>
+
+<%= link_to 'Edit', edit_mercadorium_path(@mercadorium) %> |
+<%= link_to 'Back', mercadoria_path %>

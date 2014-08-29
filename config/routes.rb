@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :mercadoria
+
   get "produtos/newrails"
   get "produtos/generate"
   get "produtos/controller"

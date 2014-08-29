@@ -1,0 +1,73 @@
+<%= form_for(@mercadorium) do |f| %>
+  <% if @mercadorium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mercadorium.errors.count, "error") %> prohibited this mercadorium from being saved:</h2>
+
+      <ul>
+      <% @mercadorium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :preco %><br>
+    <%= f.number_field :preco %>
+  </div>
+  <div class="field">
+    <%= f.label :precoumcbm %><br>
+    <%= f.number_field :precoumcbm %>
+  </div>
+  <div class="field">
+    <%= f.label :precomeiodevinte %><br>
+    <%= f.number_field :precomeiodevinte %>
+  </div>
+  <div class="field">
+    <%= f.label :altura %><br>
+    <%= f.number_field :altura %>
+  </div>
+  <div class="field">
+    <%= f.label :largura %><br>
+    <%= f.number_field :largura %>
+  </div>
+  <div class="field">
+    <%= f.label :comprimento %><br>
+    <%= f.number_field :comprimento %>
+  </div>
+  <div class="field">
+    <%= f.label :precofrete %><br>
+    <%= f.number_field :precofrete %>
+  </div>
+  <div class="field">
+    <%= f.label :imposto %><br>
+    <%= f.number_field :imposto %>
+  </div>
+  <div class="field">
+    <%= f.label :precodevenda %><br>
+    <%= f.number_field :precodevenda %>
+  </div>
+  <div class="field">
+    <%= f.label :precodaconco %><br>
+    <%= f.number_field :precodaconco %>
+  </div>
+  <div class="field">
+    <%= f.label :vendamensal %><br>
+    <%= f.number_field :vendamensal %>
+  </div>
+  <div class="field">
+    <%= f.label :outroscustosdevenda %><br>
+    <%= f.number_field :outroscustosdevenda %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

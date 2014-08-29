@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130315230445) do
+ActiveRecord::Schema.define(version: 20140829030459) do
+
+  create_table "mercadoria", force: true do |t|
+    t.string   "nome"
+    t.text     "descricao"
+    t.integer  "preco"
+    t.integer  "precoumcbm"
+    t.integer  "precomeiodevinte"
+    t.integer  "altura"
+    t.integer  "largura"
+    t.integer  "comprimento"
+    t.integer  "precofrete"
+    t.integer  "imposto"
+    t.integer  "precodevenda"
+    t.integer  "precodaconco"
+    t.integer  "vendamensal"
+    t.integer  "outroscustosdevenda"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "microposts", force: true do |t|
     t.string   "content"
