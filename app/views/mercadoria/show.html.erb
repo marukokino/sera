@@ -1,5 +1,7 @@
-           <td><%= @mercadorium.preco %></td>
-            <td><%= @mercadorium.precofrete %></td>
+     
+
+
+      
  <table class="table table-bordered">
     <thead>
         <tr>
@@ -11,7 +13,7 @@
     <tbody>
         <tr>
                <th>Descricao:</th>
-            <th><%= @mercadorium.descricao %></th>
+            <th><%= @mercadorium.preco*2 %></th>
            
        </tr>
 <tr>
@@ -71,8 +73,7 @@
   <strong>Comprimento:</strong>
   <%= @mercadorium.comprimento %>
 </p>
-<%= @mercadorium.precofrete + ( @mercadorium.precofrete * 0.05) %>
-<%= 2 + 2 %>
+
 
   <strong>Precofrete:</strong>
   <%= @mercadorium.precofrete %>
