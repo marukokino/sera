@@ -2,7 +2,7 @@ SampleApp::Application.routes.draw do
   resources :mercadoria
 
  
-  get "mercadoria/index"
+ 
 
 
 
