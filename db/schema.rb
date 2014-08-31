@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140829030459) do
+ActiveRecord::Schema.define(version: 20140831200159) do
 
   create_table "mercadoria", force: true do |t|
     t.string   "nome"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140829030459) do
     t.integer  "outroscustosdevenda"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "precooriginal"
   end
 
   create_table "microposts", force: true do |t|

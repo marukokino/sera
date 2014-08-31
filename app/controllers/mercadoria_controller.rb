@@ -83,6 +83,6 @@ class MercadoriaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mercadorium_params
-      params.require(:mercadorium).permit(:nome, :descricao, :preco, :precoumcbm, :precomeiodevinte, :altura, :largura, :comprimento, :precofrete, :imposto, :precodevenda, :precodaconco, :vendamensal, :outroscustosdevenda)
+      params.require(:mercadorium).permit(:nome, :descricao, :preco, :precoumcbm, :precomeiodevinte, :altura, :largura, :comprimento, :precofrete, :imposto, :precodevenda, :precodaconco, :vendamensal, :outroscustosdevenda, :precooriginal)
     end
 end
