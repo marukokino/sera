@@ -12,14 +12,27 @@ $grayMediumLight: #eaeaea;
 
 /* universal */
 
+
+.table{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.panel{
+    background-color: rgba(255, 255, 255, 0.8);
+}
 html {
   overflow-y: scroll;
 }
 
 body {
   padding-top: 60px;
-}
+    font-family: "Helvetica Neue" ,Helvetica, Arial,sans-serif;
+   background: image-url('bg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 
+}
 section {
   overflow: auto;
 }
@@ -69,7 +82,9 @@ p {
 
 
 /* header */
-
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+}
 #logo {
   float: left;
   margin-right: 10px;
