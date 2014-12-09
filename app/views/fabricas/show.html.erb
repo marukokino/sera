@@ -1,0 +1,72 @@
+
+
+<div class="navbar "  >
+  <div class="navbar-inner">
+    <div class="container">
+    
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Todas as fabricas", fabricas_path %></li>
+         
+            <li><%= link_to "Users", users_path %></li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                </li>
+              </ul>
+            </li>
+        
+            <li><%= link_to "Sign in", signin_path %></li>
+        
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fabrica.name %>
+  
+</p>
+
+
+     
+ <table class="table table-bordered" >
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>codigo</th>
+      <th>fabricante</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pdestaf.each do |pdestaf| %>
+      <tr>
+        <td><%= pdestaf.nome %></td>
+        <td><%= pdestaf.id %></td>
+        <td><%= pdestaf.fabricante %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ 
+    
+     
+     
+
+<%= link_to 'Edit', edit_fabrica_path(@fabrica) %> |
+<%= link_to 'Back', fabricas_path %>

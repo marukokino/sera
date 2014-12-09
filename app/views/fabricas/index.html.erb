@@ -1,0 +1,28 @@
+<h1>Listing fabricas</h1>
+<%= link_to 'Nova Fabrica', new_fabrica_path, class: "btn" %>
+
+ <table class="table table-bordered" >
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>numero</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fabricas.each do |fabrica| %>
+      <tr>
+        <td><%= fabrica.name %></td>
+        <td><%= fabrica.id %></td>
+        <td><%= link_to 'Ver detalhes', fabrica %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fabrica', new_fabrica_path %>
