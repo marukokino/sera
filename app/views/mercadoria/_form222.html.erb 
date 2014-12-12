@@ -6,18 +6,19 @@
       <ul>
       <% @mercadorium.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
+   <%= form_for(@mercadorium) do |f| %>
+  <% if @mercadorium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mercadorium.errors.count, "error") %> prohibited this mercadorium from being saved:</h2>
+
+      <ul>
+      <% @mercadorium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-
-<p>
-    <%= f.file_field :image %>
-  </p>
- <table class="table table-bordered" >
-
-   <div class="field">
+ <div class="field">
     <%= f.label :fabricante %><br>
     <%= f.text_field :fabricante %>
   </div>
@@ -30,12 +31,21 @@
     <%= f.label :descricao %><br>
     <%= f.text_area :descricao %>
   </div>
-
+<div class="field">
+    <%= f.label :precooriginal %><br>
+    <%= f.number_field :precooriginal %>
   <div class="field">
     <%= f.label :preco %><br>
     <%= f.number_field :preco %>
   </div>
-
+  <div class="field">
+    <%= f.label :precoumcbm %><br>
+    <%= f.number_field :precoumcbm %>
+  </div>
+  <div class="field">
+    <%= f.label :precomeiodevinte %><br>
+    <%= f.number_field :precomeiodevinte %>
+  </div>
   <div class="field">
     <%= f.label :altura %><br>
     <%= f.number_field :altura %>
@@ -48,64 +58,33 @@
     <%= f.label :comprimento %><br>
     <%= f.number_field :comprimento %>
   </div>
-  
+  <div class="field">
+    <%= f.label :precofrete %><br>
+    <%= f.number_field :precofrete %>
+  </div>
+  <div class="field">
+    <%= f.label :imposto %><br>
+    <%= f.number_field :imposto %>
+  </div>
+  <div class="field">
+    <%= f.label :precodevenda %><br>
+    <%= f.number_field :precodevenda %>
+  </div>
+  <div class="field">
+    <%= f.label :precodaconco %><br>
+    <%= f.number_field :precodaconco %>
+  </div>
   <div class="field">
     <%= f.label :vendamensal %><br>
     <%= f.number_field :vendamensal %>
   </div>
  
   </div>
-
-
-     <thead>
-        <tr>
-            <th>   <%= f.label :outroscustosdevenda %>    </th>
-        </tr>
-      <thead>
-     <tbody>
-          <tr>
-            <th> <%= f.number_field :outroscustosdevenda %></th>
-         </tr>
-    </tbody>
-
+  <div class="field">
+    <%= f.label :outroscustosdevenda %><br>
+    <%= f.number_field :outroscustosdevenda %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
- </table>
-
-
-  <thead>
-        <tr>
-            <th>fabricante</th>
-            <th>Preco unitario</th>
-            <th>Quantidade container</th>
-            <th>Preco FOB do container</th>
-           
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><%= @mercadorium.fabricante %></td>
-               <td><%= @mercadorium.preco %> USD</td>
-             <td><%= @quantcont %> Pecas</td>
-            <td><%= @precofobcont %> USD</td>
-       </tr>
-<tr>
-            
-           
-       </tr>
-        
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
 <% end %>

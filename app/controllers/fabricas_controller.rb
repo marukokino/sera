@@ -71,6 +71,6 @@ class FabricasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fabrica_params
-      params.require(:fabrica).permit(:name)
+      params.require(:fabrica).permit(:name, :cidade, :produtoprincipal)
     end
 end

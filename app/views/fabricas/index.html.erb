@@ -5,8 +5,8 @@
   <thead>
     <tr>
       <th>Nome</th>
-      <th>numero</th>
-      <th></th>
+      <th>cidade</th>
+      <th>produto</th>
       <th></th>
     </tr>
   </thead>
@@ -15,7 +15,8 @@
     <% @fabricas.each do |fabrica| %>
       <tr>
         <td><%= fabrica.name %></td>
-        <td><%= fabrica.id %></td>
+        <td><%= fabrica.cidade %></td>
+          <td><%= fabrica.produtoprincipal %></td>
         <td><%= link_to 'Ver detalhes', fabrica %></td>
        
       </tr>

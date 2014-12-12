@@ -39,15 +39,16 @@
   <%= @fabrica.name %>
   
 </p>
-
+<%= link_to 'Modificar esta fabrica', edit_fabrica_path(@fabrica), class: "btn btn-large"  %> |
+<%= link_to 'Todas as fabricas', fabricas_path, class: "btn btn-large" %>
 
      
  <table class="table table-bordered" >
   <thead>
     <tr>
       <th>Produto</th>
-      <th>codigo</th>
-      <th>fabricante</th>
+      <th>preco</th>
+      <th>descricao</th>
       <th></th>
     </tr>
   </thead>
@@ -56,9 +57,9 @@
     <% @pdestaf.each do |pdestaf| %>
       <tr>
         <td><%= pdestaf.nome %></td>
-        <td><%= pdestaf.id %></td>
-        <td><%= pdestaf.fabricante %></td>
-       
+        <td><%= pdestaf.preco %></td>
+        <td><%= pdestaf.descricao %></td>
+         <td><%= link_to 'Ver detalhes', pdestaf,  class: "btn"%></td>
       </tr>
     <% end %>
   </tbody>
