@@ -36,6 +36,8 @@ body {
     -o-background-size: cover;
 
 }
+
+
 section {
   overflow: auto;
 }
@@ -54,7 +56,7 @@ textarea {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  ;
 }
 
 h1 {
@@ -68,6 +70,7 @@ h3 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+   color: $gray;
 }
 h2 {
   font-size: 1.2em;

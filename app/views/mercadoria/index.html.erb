@@ -6,14 +6,14 @@
  <%= image_tag mercadorium.image_url.to_s %>
 
  <%= link_to 'Ver Detalhes', mercadorium,   class: "btn" %> 
- 
+  <%= link_to 'Destroy', mercadorium, method: :delete, data: { confirm: 'Are you sure?' } %>
  <table class="table table-bordered" >
   <thead>
     <tr>
       <th>Nome</th>
 <th>Fabrica</th>
-      <th>Descricao</th>
-      <th>Preco</th>
+      <th>Descrição</th>
+      <th>Preço</th>
 
     </tr>
   </thead>
